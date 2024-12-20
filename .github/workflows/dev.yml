@@ -4,7 +4,6 @@ on:
       - main
   
 run-name: Deploy to dev
-name: "${{ github.head_ref }}"
 
 jobs:
   deploy:

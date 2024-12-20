@@ -1,8 +1,9 @@
 run-name: Deploy to dev
-name: "${{ github.head_ref }}"
 
 on:
   pull_request:
+    branches:
+      - '*'
     branches-ignore:
       - main
 
