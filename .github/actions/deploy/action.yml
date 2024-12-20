@@ -2,4 +2,5 @@ runs:
   using: "composite"
   steps:
     - name: Deploy
+      shell: bash
       run: echo "Deploying"
