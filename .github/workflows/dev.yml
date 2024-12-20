@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      - main
+  
+run-name: Deploy to dev
+name: ${{ github.head_ref }}
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploying"
