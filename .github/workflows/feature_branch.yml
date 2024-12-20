@@ -1,4 +1,4 @@
-run-name: ${{ inputs.branch }}
+run-name: Deploy to dev - Feature Branch
 name: Deploy to dev - Feature Branch
 
 on:
