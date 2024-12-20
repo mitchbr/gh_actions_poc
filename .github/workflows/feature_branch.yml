@@ -1,10 +1,10 @@
+run-name: Deploy to dev
+name: "${{ github.head_ref }}"
+
 on:
   pull_request:
     branches-ignore:
       - main
-  
-run-name: Deploy to dev
-name: branch
 
 jobs:
   deploy:
