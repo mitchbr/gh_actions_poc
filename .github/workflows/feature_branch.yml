@@ -4,14 +4,20 @@ on:
   pull_request:
     branches:
       - '*'
-      - '!main'
+      # - '!main'
 
 jobs:
-  deploy:
-    name: Deploy
+  hold_deploy:
+    name: Hold Deploy
+    environment:
+      name: deploy-dev
     runs-on: ubuntu-latest
     steps:
       - name: Hold Deployment
         run: echo "Hold for Deployment"
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy
         run: echo "Call deployment here test"
