@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hold Deployment
-        run: echo "Hold for Deployment"
+        run: echo "Deployment Hold Released"
   deploy:
     needs: hold_deploy
     name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        run: echo "Call deployment here pause"
+        uses: ./.github/actions/deploy

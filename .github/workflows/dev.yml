@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-  
+
 run-name: Deploy to dev
 
 jobs:
@@ -10,5 +10,5 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy
-        run: echo "Deploying"
+    - name: Deploy
+      uses: ./.github/actions/deploy
