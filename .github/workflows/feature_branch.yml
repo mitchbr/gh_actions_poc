@@ -1,7 +1,7 @@
 on:
   pull_request:
-    branches:
-      - '!main'
+    branches-ignore:
+      - main
   
 run-name: Deploy to dev
 name: branch
@@ -16,4 +16,4 @@ jobs:
       - name: Hold Deployment
         run: echo "Hold for Deployment"
       - name: Deploy
-        run: echo "Call deployment here"
+        run: echo "Call deployment here test"
