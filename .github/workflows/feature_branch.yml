@@ -9,8 +9,6 @@ on:
 jobs:
   deploy:
     name: Deploy
-    environment:
-      name: dev-deploy
     runs-on: ubuntu-latest
     steps:
       - name: Hold Deployment
