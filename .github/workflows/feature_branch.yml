@@ -1,17 +1,27 @@
-run-name: Deploy to dev
+run-name: Deploy to dev - Feature Branch
+name: Deploy to dev - Feature Branch
 
 on:
   pull_request:
     branches:
-      - '*'
+      - '**'
       - '!main'
 
 jobs:
-  deploy:
-    name: Deploy
+  hold_deploy:
+    name: Hold Deploy
+    # environment:
+    #   name: deploy-dev
     runs-on: ubuntu-latest
     steps:
       - name: Hold Deployment
-        run: echo "Hold for Deployment"
+        run: echo "Deployment Hold Released"
+  deploy:
+    needs: hold_deploy
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
       - name: Deploy
-        run: echo "Call deployment here test"
+        uses: ./.github/actions/deploy
