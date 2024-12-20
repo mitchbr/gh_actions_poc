@@ -1,10 +1,11 @@
-run-name: Deploy to dev
+run-name: Deploy to dev - Feature Branch
+name: ${{ inputs.branch }}
 
 on:
   pull_request:
     branches:
-      - '*'
-      # - '!main'
+      - '**'
+      - '!main'
 
 jobs:
   hold_deploy:
