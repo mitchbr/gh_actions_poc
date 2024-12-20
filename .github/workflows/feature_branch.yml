@@ -9,7 +9,11 @@ name: branch
 jobs:
   deploy:
     name: Deploy
+    environment:
+      name: dev-deploy
     runs-on: ubuntu-latest
     steps:
       - name: Hold Deployment
         run: echo "Hold for Deployment"
+      - name: Deploy
+        run: echo "Call deployment here"
