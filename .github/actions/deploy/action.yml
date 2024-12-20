@@ -3,4 +3,4 @@ runs:
   steps:
     - name: Deploy
       shell: bash
-      run: echo "Deploying"
+      run: echo "Deploying test"
